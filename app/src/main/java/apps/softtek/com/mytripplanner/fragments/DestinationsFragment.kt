@@ -31,29 +31,7 @@ class DestinationsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //getting recyclerview from xml
-        val recyclerView = view?.findViewById(R.id.destination_recycler) as RecyclerView
 
-        //adding a layoutmanager
-        recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-
-        //adding some dummy data to the list
-        destinations.add(Destination("Nuevo León", "Lorem Ipsum", 1))
-
-        //now adding the adapter to recyclerview
-        recyclerView.adapter = adapter
-        adapter.notifyDataSetChanged()
-
-        //added touchListener to Recycler
-        recyclerView.addOnItemTouchListener(RecyclerTouchListener(this!!.context, recyclerView, object : ClickListener {
-            override fun onClick(view: View, position: Int) {
-                //intentFun(view, position) // <-------- se manda el view donde vamos a buscar //
-            }
-
-            override fun onLongClick(view: View?, position: Int) {
-
-            }
-        }))
 
     }
 
@@ -104,11 +82,43 @@ class DestinationsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater.inflate(R.layout.fragment_destinations, container, false)
+
+
+
         return rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //getting recyclerview from xml
+        val recyclerView = view?.findViewById(R.id.destination_recycler) as RecyclerView
+
+        //adding a layoutmanager
+        recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+
+        //adding some dummy data to the list
+        destinations.add(Destination("Nuevo León", "Lorem Ipsum", R.drawable.MTY, 1))
+        destinations.add(Destination("CDMX", "Lorem Ipsum", R.drawable.CDMX,2))
+        destinations.add(Destination("Guadalajara", "Lorem Ipsum", R.drawable.GDL, 3))
+        destinations.add(Destination("Veracruz", "Lorem Ipsum", R.drawable.VRZ,4))
+
+
+
+        //now adding the adapter to recyclerview
+        recyclerView.adapter = adapter
+        adapter.notifyDataSetChanged()
+
+        //added touchListener to Recycler
+        recyclerView.addOnItemTouchListener(RecyclerTouchListener(this!!.context, recyclerView, object : ClickListener {
+            override fun onClick(view: View, position: Int) {
+                //intentFun(view, position) // <-------- se manda el view donde vamos a buscar //
+            }
+
+            override fun onLongClick(view: View?, position: Int) {
+
+            }
+        }))
 
     }
 

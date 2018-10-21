@@ -1,5 +1,6 @@
 package apps.softtek.com.mytripplanner.recycler
 
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,8 @@ class DestinationAdapter (val destinationList: ArrayList<Destination>) : Recycle
         fun bindItems(destination: Destination) {
             val nametxt = itemView.findViewById(R.id.destination_title) as TextView
             nametxt.text = destination.destinationName
+            val imagendraw = itemView.findViewById(R.id.destination_image) as Drawable
+
 
         }
 

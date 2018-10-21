@@ -3,13 +3,13 @@ package apps.softtek.com.mytripplanner
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.FrameLayout
-import androidx.fragment.app.FragmentActivity
+import androidx.appcompat.app.AppCompatActivity
 import apps.softtek.com.mytripplanner.fragments.AgendaFragment
 import apps.softtek.com.mytripplanner.fragments.DestinationsFragment
 import apps.softtek.com.mytripplanner.fragments.NotificationsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : FragmentActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var content: FrameLayout? = null
 
