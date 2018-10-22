@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
 
-        val fragment = DestinationsFragment.Companion.newInstance()
+        val fragment = DestinationsFragment.newInstance()
         addFragment(fragment)
     }
 

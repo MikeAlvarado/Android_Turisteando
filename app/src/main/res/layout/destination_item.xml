@@ -16,7 +16,7 @@
         android:layout_marginBottom="16dp"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="16dp"
-        app:cardElevation="16dp"
+        app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
                 android:layout_marginBottom="24dp"
                 android:minHeight="56dp"
                 app:cardCornerRadius="27dp"
-                app:cardElevation="0dp"
+                app:cardElevation="16dp"
                 app:layout_constraintBottom_toBottomOf="@+id/destination_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">

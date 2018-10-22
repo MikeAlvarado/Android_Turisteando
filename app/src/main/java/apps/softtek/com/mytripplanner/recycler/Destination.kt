@@ -5,6 +5,6 @@ import android.graphics.drawable.Drawable
 data class Destination(
         val destinationName: String,
         val destinationDescription: String,
-        val destinationImage: Drawable,
+        val destinationImage: Int,
         var destinationID: Int
 )
