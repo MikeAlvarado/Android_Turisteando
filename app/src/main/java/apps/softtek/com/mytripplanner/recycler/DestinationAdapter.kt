@@ -1,12 +1,11 @@
 package apps.softtek.com.mytripplanner.recycler
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import apps.softtek.com.mytripplanner.R
 
 class DestinationAdapter (val destinationList: ArrayList<Destination>) : RecyclerView.Adapter<DestinationAdapter.ViewHolder>() {
 
@@ -31,7 +30,19 @@ class DestinationAdapter (val destinationList: ArrayList<Destination>) : Recycle
         fun bindItems(destination: Destination) {
             val nametxt = itemView.findViewById(R.id.destination_title) as TextView
             nametxt.text = destination.destinationName
-            val imagendraw = itemView.findViewById(R.id.destination_image) as Drawable
+            val imagendraw = itemView.findViewById(R.id.destination_image) as ImageView
+            imagendraw.setImageResource(R.drawable.mty)
+
+            /*// Generate palette synchronously and return it
+            fun createPaletteSync(bitmap: Bitmap): Palette = Palette.from(bitmap).generate()
+
+            // Generate palette asynchronously and use it on a different
+            // thread using onGenerated()
+            fun createPaletteAsync(bitmap: Bitmap) {
+                Palette.from(bitmap).generate { palette ->
+                    // Use generated instance
+                }
+            }*/
 
 
         }
