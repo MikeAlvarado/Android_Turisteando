@@ -79,10 +79,6 @@ class DestinationsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater.inflate(R.layout.fragment_destinations, container, false)
-
-
-
-
         return rootView
     }
 
@@ -97,7 +93,7 @@ class DestinationsFragment : Fragment() {
 
         //adding some dummy data to the list
         destinations.add(Destination("Nuevo León", "Lorem Ipsum", R.drawable.mty, 1))
-        destinations.add(Destination("CDMX", "Lorem Ipsum", R.drawable.cdmx,2))
+        destinations.add(Destination("CMDX", "Lorem Ipsum", R.drawable.cdmx,2))
         destinations.add(Destination("Guadalajara", "Lorem Ipsum", R.drawable.gdl, 3))
         destinations.add(Destination("Veracruz", "Lorem Ipsum", R.drawable.vrz,4))
 
